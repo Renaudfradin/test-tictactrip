@@ -36,7 +36,7 @@ export default function inputDepart({setSearchCity,searchCity }) {
   }
 
   return (
-    <>
+    <div className="inputResult">
       <input type="text"
         onClick={clickInput}
         value={searchCity}
@@ -44,20 +44,15 @@ export default function inputDepart({setSearchCity,searchCity }) {
         className="inputSearch"
         placeholder="De: Ville, gare ou aéroport"
       />
-
-      <div>
-        {resultCity ? 
-          popularCity.map((city) => (
-          <>
+      {resultCity ? 
+        <div className="result">
+          {popularCity.map((city) => (
             <p
               onClick={() => clickAddvalue(city.local_name)}
             >{city.local_name}</p>
-          </>
-          ))
-          :
-          <></>
-        }
-      </div>
-    </>
+          ))}
+        </div>
+        : null }
+    </div>
   )
 }
