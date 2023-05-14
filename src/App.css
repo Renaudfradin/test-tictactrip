@@ -5,6 +5,7 @@
 }
 
 .inputSearch{
+  width: auto;
   border-radius: 8px;
   color: #132968;
   font-weight: 400;
@@ -21,8 +22,37 @@
   caret-color: #a1a9c3;
   color: #132968;
   margin-bottom: 5px;
-  margin-right: 15px;
+  margin-right: 0px;
   display: block;
+}
+
+.inputDate{
+  width: auto;
+  color: #132968;
+  font-weight: 400;
+  height: 48px;
+  padding: 0 20px;
+  border: 1px solid #f1f2f6;
+  border-radius: 10px;
+  font-size: 16px;
+  text-align: left;
+  letter-spacing: .3px;
+  appearance: none;
+  background-color: #f1f2f6;
+  box-shadow: none;
+  caret-color: #a1a9c3;
+  color: #132968;
+  margin-bottom: 5px;
+  margin-right: 0px;
+  display: block;
+}
+
+.boxDate{
+  display: flex;
+  border-radius: 8px;
+  background-color: #f1f2f6;
+  margin-bottom: 5px;
+  height: 48px;
 }
 
 .result{
@@ -31,15 +61,17 @@
   padding: 12px;
   background-color: #ffffff;
   margin-top: 60px;
+  color: #000000;
 }
 
 .result p {
   margin:0;
   padding: 10px;
+  color: #000000;
 }
 
 .searchBtn{
-  width: 250px;
+  width: 100%;
   display: flex;
   text-align: center;
   line-height: 20px;
@@ -133,7 +165,7 @@
   flex-direction: column;
 }
 
-@media screen and (max-width:768px) and (min-width:426px){
+@media screen and (max-width:950px) and (min-width:426px){
   .textHome img {
     margin: 0 0 28px;
     max-width: 90%;
@@ -159,9 +191,13 @@
     display: flex;
     flex-direction: column;
   }
+
+  .inputDate {
+    width: 50%;
+  }
 }
 
-@media screen and (max-width:1024px) and (min-width:769px) {
+@media screen and (max-width:1024px) and (min-width:951px) {
   .inputBox {
     background-color: #ffffff;
     border-radius: 8px;
@@ -191,6 +227,15 @@
   .textHome p {
     font-size: 16px;
     margin: 0%;
+  }
+
+  .inputSearch {
+    margin-right: 10px;
+  }
+
+  .boxDate {
+    width: 25%;
+    margin-right: 10px;
   }
 }
 
@@ -244,9 +289,18 @@
     font-size: 16px;
     margin: 0%;
   }
+
+  .inputSearch {
+    margin-right: 10px;
+  }
+
+  .boxDate {
+    width: 25%;
+    margin-right: 10px;
+  }
 }
 
-@media screen and (min-width:1440px){
+@media screen and (min-width:1441px){
   .imgHome {
     height: 350px;
     background: center 27%/cover;
@@ -319,5 +373,14 @@
     font-size: 24px;
     line-height: 24px;
     margin: 0;
+  }
+
+  .inputSearch {
+    margin-right: 10px;
+  }
+
+  .boxDate {
+    width: 30%;
+    margin-right: 10px;
   }
 }
