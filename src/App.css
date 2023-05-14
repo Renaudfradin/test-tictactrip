@@ -156,8 +156,26 @@
   z-index: 0;
 }
 
-.menu p{
+.menu{
+  cursor: pointer;
+  margin: 0%;
+  padding: 0px;
+}
+
+.dropdown p{
   margin: 0;
+  padding: 10px;
+  color: #000000;
+  cursor: pointer;
+}
+
+.dropdown{
+  position: absolute;
+  border-radius: 8px;
+  padding: 12px;
+  background-color: #fdfbfb;
+  margin-top: 0px;
+  color: #000000;
 }
 
 .inputResult{
@@ -193,6 +211,13 @@
   }
 
   .inputDate {
+    width: 50%;
+  }
+
+  .menu {
+    cursor: pointer;
+    margin: 0%;
+    padding: 0 20px;
     width: 50%;
   }
 }
@@ -236,6 +261,13 @@
   .boxDate {
     width: 25%;
     margin-right: 10px;
+  }
+
+  .menu {
+    cursor: pointer;
+    margin: 0%;
+    padding: 0px;
+    width: 10%;
   }
 }
 
@@ -297,6 +329,13 @@
   .boxDate {
     width: 25%;
     margin-right: 10px;
+  }
+
+  .menu {
+    cursor: pointer;
+    margin: 0%;
+    padding: 0px;
+    width: 10%;
   }
 }
 
@@ -382,5 +421,12 @@
   .boxDate {
     width: 30%;
     margin-right: 10px;
+  }
+
+  .menu {
+    cursor: pointer;
+    margin: 0%;
+    padding: 0px;
+    width: 10%;
   }
 }

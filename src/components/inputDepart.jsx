@@ -1,11 +1,11 @@
 import axios from "axios";
 import React, { useState } from "react";
 
-export default function inputDepart({setSearchCity,searchCity }) {
+export default function inputDepart({ setSearchCity,searchCity }) {
   const [popularCity, setPopularCity] = useState([]);
   const [resultCity, setResultCity] = useState(false);
 
-  const clickInput = () => {
+  const handleInput = () => {
     try {
       axios.get("https://api.comparatrip.eu/cities/popular/5")
         .then((response) => {
@@ -32,15 +32,16 @@ export default function inputDepart({setSearchCity,searchCity }) {
   }
 
   const clickAddvalue = (citylocal_name) => {
-    setSearchCity(citylocal_name)
+    setSearchCity(citylocal_name);
+    setResultCity(!resultCity);
   }
 
   return (
     <div className="inputResult">
       <input type="text"
-        onClick={clickInput}
-        value={searchCity}
-        onChange={searchCitys}
+        onClick={ handleInput }
+        value={ searchCity }
+        onChange={ searchCitys }
         className="inputSearch"
         placeholder="De: Ville, gare ou aéroport"
       />
@@ -49,7 +50,7 @@ export default function inputDepart({setSearchCity,searchCity }) {
           {popularCity.map((city) => (
             <p
               onClick={() => clickAddvalue(city.local_name)}
-            >{city.local_name}</p>
+            >{ city.local_name }</p>
           ))}
         </div>
         : null }
